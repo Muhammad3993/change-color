@@ -1,0 +1,156 @@
+.sidebar {
+    width: 20%;
+    height: max-content;
+    background: var(--wht);
+    margin-top: 10px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+}
+
+.sidebar_links {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar_link {
+    padding: 15px 22px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--blc);
+    border-radius: 10px;
+}
+
+.sidebar_link:hover {
+    opacity: 1;
+    background: var(--gry);
+    border-radius: 10px;
+}
+
+.sidebar_link i {
+    font-size: 23px;
+    color: var(--blue);
+}
+
+.sidebar_hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar_fallowings {
+    padding: 0 22px;
+}
+
+.sidebar_fallowings_p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sidebar_fallowings_group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar_fallowings_group_p {
+    margin-top: 20px;
+}
+
+.sidebar_group {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar_div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar_group_img {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.sidebar_group_img img {
+    width: 100%;
+    border-radius: inherit;
+}
+
+.sidebar_group_txt_title {
+    width: 150px;
+    font-size: 14px;
+    color: var(--blc);
+    margin-top: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.sidebar_group_txt_subtitle {
+    width: 150px;
+    color: var(--gry2);
+    font-size: 12px;
+    margin-top: 3px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.sidebar_group_number {
+    width: 18px;
+    max-width: 18px;
+    height: 18px;
+    background: var(--red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--wht);
+    font-size: 13px;
+}
+
+.fixed {
+    display: none;
+}
+
+@media screen and (max-width: 1470px) {
+    .sidebar {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+        position: absolute;
+        top: 82px;
+        left: -250px;
+        transition: .5s;
+    }
+    .sidebar.sidebar_none {
+        left: 0;
+    }
+
+
+    .fixed {
+        width: 50px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: -50px;
+        background: var(--wht);
+        cursor: pointer;
+    }
+}
